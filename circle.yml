@@ -1,6 +1,7 @@
 
 test:
-  - gcc -coverage -O0 hello.c -o hello.c
-  - ./hello
-  - bash <(curl -s https://codecov.io/bash)
+  override:
+    - gcc -coverage -O0 hello.c -o hello.c
+    - ./hello
+    - bash <(curl -s https://codecov.io/bash)
 
